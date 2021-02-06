@@ -1,4 +1,4 @@
-package top.blid.error;
+package cloud.dwz.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

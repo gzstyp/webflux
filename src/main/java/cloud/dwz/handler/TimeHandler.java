@@ -1,4 +1,4 @@
-package top.blid.handler;
+package cloud.dwz.handler;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

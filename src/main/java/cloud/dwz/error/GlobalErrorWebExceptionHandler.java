@@ -1,4 +1,4 @@
-package top.blid.error;
+package cloud.dwz.error;
 
 import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler;

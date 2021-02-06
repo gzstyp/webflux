@@ -1,4 +1,4 @@
-package top.blid.error;
+package cloud.dwz.error;
 
 import org.springframework.boot.web.reactive.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Component;

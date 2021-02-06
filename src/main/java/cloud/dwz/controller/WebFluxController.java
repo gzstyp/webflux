@@ -1,12 +1,12 @@
-package top.blid.controller;
+package cloud.dwz.controller;
 
+import cloud.dwz.bean.User;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import top.blid.bean.User;
 
 import java.time.Duration;
 import java.util.ArrayList;

@@ -1,6 +1,4 @@
-package top.blid.bean;
-
-import java.math.BigInteger;
+package cloud.dwz.bean;
 
 /**
  * @作者 田应平
