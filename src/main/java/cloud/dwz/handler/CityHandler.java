@@ -16,7 +16,8 @@ import java.util.Optional;
 public class CityHandler {
     
     public Mono<ServerResponse> helloCity(final ServerRequest request){
-        return responseJson(sayHelloCity(request));
+        final Mono<String> stringMono = sayHelloCity(request);//拆分便于理解
+        return responseJson(stringMono);
     }
 
     // http://127.0.0.1:8280/hello?city=beijing
