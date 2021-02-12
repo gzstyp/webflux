@@ -38,7 +38,7 @@ public class WebFluxController{
         for(int i = 0; i < 5; i++){
             list.add(new User(1000+i,"田应平"+i));
         }
-        return Flux.fromIterable(list).delayElements(Duration.ofSeconds(1));
+        return Flux.fromIterable(list).delayElements(Duration.ofSeconds(1));//每隔1秒杀推送数据
     }
 
     /**
