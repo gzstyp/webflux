@@ -12,7 +12,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-/***
+/**
+ *
  * @作者 田应平
  * @版本 v1.0
  * @创建时间 2019-06-11 0:08
@@ -43,15 +44,15 @@ public class WebFluxController{
 
     /**
      * 采用Flux或Mono都能实现响应式或stream流式模型,Mono<T>适用于返回单个对象
-     * @访问 http://127.0.0.1:8280/user/user
+     * @url <url>http://127.0.0.1:8280/user/get</url>
      * @param
      * @作者 田应平
      * @QQ 444141300
      * @创建时间 2019/6/11 0:23
     */
-    @GetMapping("/user")
-    public Mono<User> user(){
-        return Mono.just(new User(1024,"田卓智"));
+    @GetMapping("/get")
+    public Mono<User> get(){
+        return Mono.justOrEmpty(new User(1024,"田卓智"));
     }
 
 }
