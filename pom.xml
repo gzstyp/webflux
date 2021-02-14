@@ -17,6 +17,7 @@
         webflux可以在有限的资源下提高系统的吞吐量和伸缩性;
         它仅支持spring boot 2.0 或 2.1;
         Mono.justOrEmpty
+        总结:在接收请求参数时,简单类型用注解方式接口,复杂的可以使用基于函数接口来处理接收操作;
     </description>
 
     <properties>
