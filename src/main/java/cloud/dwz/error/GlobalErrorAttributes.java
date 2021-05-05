@@ -10,8 +10,8 @@ import java.util.Map;
 public class GlobalErrorAttributes extends DefaultErrorAttributes {
     
     @Override
-    public Map<String, Object> getErrorAttributes(ServerRequest request, boolean includeStackTrace) {
-        Map<String, Object> map = super.getErrorAttributes(request, includeStackTrace);
+    public Map<String, Object> getErrorAttributes(final ServerRequest request,final boolean includeStackTrace) {
+        final Map<String, Object> map = super.getErrorAttributes(request, includeStackTrace);
         if (getError(request) instanceof GlobalException) {
             GlobalException ex = (GlobalException) getError(request);
             map.put("exception", ex.getClass().getSimpleName());
@@ -22,7 +22,7 @@ public class GlobalErrorAttributes extends DefaultErrorAttributes {
         }
         map.put("exception", "SystemException");
         map.put("message", "System Error , Check logs!");
-        map.put("status", "500");
+        map.put("status",500);
         map.put("error", " System Error ");
         return map;
     }
