@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
  * @QQ号码 444141300
  * @Email service@dwlai.com
  * @官网 http://www.fwtai.com
- */
+*/
 public final class ToolClient{
 
     public static String json(final String data){

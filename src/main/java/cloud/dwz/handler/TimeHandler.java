@@ -29,5 +29,4 @@ public class TimeHandler{
     public Mono<ServerResponse> getDate(final ServerRequest serverRequest){
         return ok().contentType(MediaType.TEXT_PLAIN).body(Mono.just("今天是" + new SimpleDateFormat("yyyy-MM-dd").format(new Date())),String.class);
     }
-
 }
