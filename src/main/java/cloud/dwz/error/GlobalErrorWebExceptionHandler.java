@@ -2,6 +2,7 @@ package cloud.dwz.error;
 
 import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler;
+import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.reactive.error.ErrorAttributes;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.Order;
@@ -23,8 +24,7 @@ import java.util.Map;
 @Order(-2)
 public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHandler {
 
-    public GlobalErrorWebExceptionHandler(GlobalErrorAttributes g, ApplicationContext applicationContext,
-            ServerCodecConfigurer serverCodecConfigurer) {
+    public GlobalErrorWebExceptionHandler(GlobalErrorAttributes g, ApplicationContext applicationContext,ServerCodecConfigurer serverCodecConfigurer) {
         super(g, new ResourceProperties(), applicationContext);
         super.setMessageWriters(serverCodecConfigurer.getWriters());
         super.setMessageReaders(serverCodecConfigurer.getReaders());
@@ -36,9 +36,7 @@ public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHan
     }
 
     private Mono<ServerResponse> renderErrorResponse(final ServerRequest request) {
-
-        final Map<String, Object> errorPropertiesMap = getErrorAttributes(request, false);
-
+        final Map<String, Object> errorPropertiesMap = getErrorAttributes(request,ErrorAttributeOptions.defaults());
         return ServerResponse.status(HttpStatus.BAD_REQUEST)
             .contentType(MediaType.APPLICATION_JSON_UTF8)
             .body(BodyInserters.fromObject(errorPropertiesMap));

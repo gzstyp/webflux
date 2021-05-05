@@ -54,5 +54,4 @@ public class WebFluxController{
     public Mono<User> get(){
         return Mono.justOrEmpty(new User(1024,"田卓智"));
     }
-
 }
