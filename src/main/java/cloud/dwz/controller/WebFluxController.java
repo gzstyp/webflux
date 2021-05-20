@@ -12,21 +12,12 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @作者 田应平
- * @版本 v1.0
- * @创建时间 2019-06-11 0:08
- * @QQ号码 444141300
- * @Email service@dwlai.com
- * @官网 http://www.fwtai.com
-*/
 @RestController
 @RequestMapping("/user")
 public class WebFluxController{
 
     /**
-     * 采用Flux或Mono都能实现响应式或stream流式模型,Flux<T>适用于返回List
+     * 采用Flux或Mono都能实现响应式或stream流式模型,Flux<T>适用于返回List,IE8出现下载
      * http://127.0.0.1:8280/user/list
      * @param
      * @作者 田应平
@@ -43,7 +34,7 @@ public class WebFluxController{
     }
 
     /**
-     * 采用Flux或Mono都能实现响应式或stream流式模型,Mono<T>适用于返回单个对象
+     * 采用Flux或Mono都能实现响应式或stream流式模型,Mono<T>适用于返回单个对象,IE8出现下载
      * @url <url>http://127.0.0.1:8280/user/get</url>
      * @param
      * @作者 田应平
