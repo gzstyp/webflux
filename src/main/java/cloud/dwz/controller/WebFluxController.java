@@ -26,7 +26,7 @@ public class WebFluxController{
     */
     @GetMapping(value = "/list",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     public Flux<User> getList(){
-        final List<User> list = new ArrayList();
+        final List<User> list = new ArrayList<User>(5);
         for(int i = 0; i < 5; i++){
             list.add(new User(1000+i,"田应平"+i));
         }
